@@ -1,4 +1,6 @@
-const { fetchPostById } = require('@/utils/fetch');
+import { fetchPostById } from '@/utils/fetch';
+
+import styles from './Post.module.css';
 
 async function Post({ postId }) {
   const post = await fetchPostById(postId);
@@ -8,7 +10,7 @@ async function Post({ postId }) {
   }
 
   return (
-    <div>
+    <div className={styles.post}>
       <h3>{post.title}</h3>
       <p>{post.body}</p>
       <p>

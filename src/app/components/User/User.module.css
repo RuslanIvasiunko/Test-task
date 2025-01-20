@@ -1,0 +1,15 @@
+.user {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  font-weight: 200;
+  background-color: #fff;
+}
+
+.lineIndent {
+  padding-left: 20px;
+}
+
+.fontWeight {
+  font-weight: 600;
+}

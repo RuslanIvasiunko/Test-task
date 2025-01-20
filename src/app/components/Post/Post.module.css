@@ -1,0 +1,7 @@
+.post {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  font-weight: 200;
+  background-color: #fff;
+}

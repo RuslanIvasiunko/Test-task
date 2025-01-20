@@ -1,5 +1,7 @@
 import { fetchUserById } from '@/utils/fetch';
 
+import styles from './User.module.css';
+
 async function User({ userId }) {
   const user = await fetchUserById(userId);
 
@@ -7,35 +9,38 @@ async function User({ userId }) {
     return <p>User information is not available.</p>;
   }
   return (
-    <div>
+    <div className={styles.user}>
       <h3>Name: {user.name}</h3>
       <h4>Nickname: {user.username}</h4>
       <p>
         Email: <a href={`mailto:${user.email}`}></a>
-        <span>{user.email}</span>
+        <span className={styles.fontWeight}>{user.email}</span>
       </p>
       <address>
         <p>Address</p>
-        <p>
-          Street: <span>{user.address.street}</span>
+        <p className={styles.lineIndent}>
+          Street:{' '}
+          <span className={styles.fontWeight}>{user.address.street}</span>
         </p>
-        <p>
-          Suite: <span> {user.address.suite}</span>
+        <p className={styles.lineIndent}>
+          Suite: <span className={styles.fontWeight}>{user.address.suite}</span>
         </p>
-        <p>
-          City: <span>{user.address.city}</span>
+        <p className={styles.lineIndent}>
+          City: <span className={styles.fontWeight}>{user.address.city}</span>
         </p>
-        <p>
-          zipcode: <span>{user.address.zipcode}</span>
+        <p className={styles.lineIndent}>
+          zipcode:{' '}
+          <span className={styles.fontWeight}>{user.address.zipcode}</span>
         </p>
-        <p>
-          Geo: lat: <span>{user.address.geo.lat}</span> lng:{' '}
-          <span>{user.address.geo.lng}</span>
+        <p className={styles.lineIndent}>
+          Geo: lat:{' '}
+          <span className={styles.fontWeight}>{user.address.geo.lat}</span> lng:{' '}
+          <span className={styles.fontWeight}>{user.address.geo.lng}</span>
         </p>
       </address>
       <p>
         Phone: <a href={`tel: ${user.phone}`}></a>
-        <span>{user.phone}</span>
+        <span className={styles.fontWeight}>{user.phone}</span>
       </p>
       <p>
         Website:{' '}
@@ -44,19 +49,22 @@ async function User({ userId }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span>{user.website}</span>
+          <span className={styles.fontWeight}>{user.website}</span>
         </a>
       </p>
       <section>
         <h4>Company</h4>
-        <p>
-          Company name: <span>{user.company.name}</span>
+        <p className={styles.lineIndent}>
+          Company name:{' '}
+          <span className={styles.fontWeight}>{user.company.name}</span>
         </p>
-        <p>
-          Catchphrase: <span>{user.company.catchPhrase}</span>
+        <p className={styles.lineIndent}>
+          Catchphrase:{' '}
+          <span className={styles.fontWeight}>{user.company.catchPhrase}</span>
         </p>
-        <p>
-          Business stuff: <span>{user.company.bs}</span>
+        <p className={styles.lineIndent}>
+          Business stuff:{' '}
+          <span className={styles.fontWeight}>{user.company.bs}</span>
         </p>
         <p>
           Id: <span>{user.id}</span>

@@ -1,0 +1,22 @@
+.header {
+  width: 100%;
+  height: 70px;
+  padding: 20px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #696969;
+}
+
+.nav_list {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav_item {
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #dcdcdc;
+}

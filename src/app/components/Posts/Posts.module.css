@@ -1,0 +1,11 @@
+.posts_list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  list-style: none;
+}
+
+.posts_item {
+  flex-basis: calc(20% - 10px);
+}
